@@ -3,35 +3,60 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-		<meta name="author" content="Jesica Guido">
+	<meta name="author" content="Jesica Guido">
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<title>Comenzando con la fotografía</title>
-	<link rel="stylesheet" href="estilos.css">
+	<link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-	<header>
-		<h1>Comenzando con la fotografía</h1>
-		<nav>
-			<a href="index.html">Inicio</a>
-		<a href="paisajes.html">Paisajes</a>
-		<a href="retratos.html">Retratos</a>
-		</nav>
+	<div id="contenido">
+		<header>
+			<h1>Comenzando con la fotografía</h1>
+			<nav>
+				<a href="index.html" class="paginaActual">Inicio</a>
+				<a href="paisajes.html">Paisajes</a>
+				<a href="retratos.html">Retratos</a>
+			</nav>				
+		</header>
+		<main>
+			<section>
+				<figure id="principal">
+					<img src="img/paris.jpg" alt="imagen de paris" title="imagen de paris" id="imgPrincipal">
+				</figure>
+			</section>
+			
+			<section id="sec">
+				<figure id="col1">
+					<img src="img/paisaje.jpg" alt="imagen de un paisaje" title="imagen de un paisaje" class="imgSec">
+					<figcaption><a href="paisajes.html">Paisajes</a></figcaption>
+				</figure>
+				<figure id="col2">
+					<img src="img/retrato.jpg" alt="retrato de una mujer" title="retrato de una mujer" class="imgSec">
+					<figcaption><a href="retratos.html">Retratos</a></figcaption>
+				</figure>
+			</section>
+		</main>
+		<footer>
+			<section>
+				<h2>Contacto</h2>
+				<address>
+					<p>guido.jdg@gmail.com</p>
+					<p>Avenida Rivadavia 8500, Ciudad Autónoma de Buenos Aires, Argentina</p>
+					<p>Telefono:  </p>
+				</address>
+			</section>
+			<section>
+				<h2>Términos</h2>
+			</section>
+			<section>
+				<h2>Redes Sociales</h2>
+			</section>
+			<section>
+				<h2>Derechos</h2>
+			</section>
+		</footer>
 
-
-				
-	</header>
-	<main>
-		<section>
-			<img src="img/gatito.jpg" alt="imagen de un gato" title="gatito jugando">
-		</section>
-		<section>
-			<img src="img/aureora.jpg" alt="imagen de un paisaje" title="aureora boreal">
-			<img src="img/retrato.jpg" alt="retrato de una mujer" title="retrato de una mujer">
-		</section>
-	</main>
-	<footer>
-		
-	</footer>
+	</div>
 </body>
 </html>
