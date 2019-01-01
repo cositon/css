@@ -1,77 +1,144 @@
+/*Clases y IDs
+BODY:
+  Clases:
+        contenido:Abarca todo el contenido del documento
+HEADER:        
+    Clases:
+        paginaActual:Para señalar la pagina actual en el header
+FOOTER:
+    Clases:
+        colFooter: Agrupa cada columna del footer
+        mail: Para las direcciones de mail
+        RS: Agrupa las redes sociales
+INDEX.HTML
+    IDs:
+        mainIndex: Agrupa el contenido del index
+        principal: Contiene a la imagen principal 
+        imgPrincipal: Contiene a la imagen principal
+        sec: Contiene a las imagenes secundarias
+        col1: Contiene a la columna de la izquierda
+        col2: Contiene a la columna de la derecha
+    Clases:
+        muestras: Contiene el texto inferior de la imagen
+        imgSec: Son las imagenes secundarias
+        
+PAISAJES.HTML Y RETRATOS.HTML:
+    Clases:
+        galeria: Agrupa al contenido de la galeria
+        galeriaContenido: Agrupa al contenido de la galeria
+        contenedorImagen: Agrupa a cada una de las imagenes
+        blur: Indica la imagen que se le aplica blur
+        grises: Indica las imagenes en escala de grises
+        sepia: Indica la imagen que se le aplica el efecto sepia       
+
+    
+
+
+Estructura del CSS
+1.Generalidades: Propiedades que se cumplen para todas las paginas tanto en version movil como de escritorio
+1.1 Propiedades generales del documento
+1.2 Propiedades generales del header
+1.3 Propiedades generales del main
+1.4 Propiedades generales del footer
+1.5 Propiedades generales del archivo index.html
+2.Media: Propiedades especificas para cada dispositivo
+2.1 Propiedades de la version de escritorio
+2.1.1 Propiedadse generales del cuerpo del documento
+2.1.2 Propiedades generales del header para la version de escritorio
+2.1.3 Propiedades generales del footer para la version de escritorio
+2.1.4 Propiedades especificas index.html de la version de escritorio   
+2.1.5 Propiedades especificas de los arhivos paisajes.html y retratos.html de la version de escritorio   
+2.2 Propiedades de la version movil
+2.2.1 Propiedadse generales del cuerpo del documento
+2.2.2 Propiedades generales del header para la version movil
+2.2.3 Propiedades generales del main para la version movil
+2.2.4 Propiedades generales del footer para la version movil
+2.2.5 Propiedades especificas del archivo index.html de la verison movil
+2.2.6.Propiedades generales de los archivos paisajes.html y retratos.html de la verison movil
+3. Animacion
+*/
+
+
+
+/********************1.GENERALIDADES********************/
+/*1.1.1PROPIEDADES GENERALES*/
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script');
-/********************GENERALIDADES********************/
-/*Estas son propiedades que se cumplen tanto para la version de escritorio como la version movil y para todas las paginas*/
 body{font-family: 'Dancing Script', cursive; background-color:#02010a;font-size:1.1em}
-/*HEADER*/
+/*1.2.HEADER*/
 header{background-color: #5b7989;border-radius:10px 10px 0 0}
 h1{color:white;text-shadow:2px 2px #02010a}
 nav a{color:white; }
 .paginaActual{text-decoration: none;}
-/*MAIN*/
+/*1.3.MAIN*/
 img{-webkit-filter:drop-shadow(2px 2px 2px #02010a);filter:drop-shadow(2px 2px #02010a);}
-/*FOOTER*/
+  .blur{-webkit-filter:blur(10px);filter:blur(10px);}
+  .grises{-webkit-filter:grayscale(100%);filter:grayscale(100%);}
+  .sepia{-webkit-filter:sepia(90%);filter:sepia(90%);}
+/*1.4.FOOTER*/
 footer{background-color: #c6d5c5;border-radius:0 0 10px 10px}
 footer h2,footer p{font-weight: bold;margin:0;}
-#mail, .RS{color:black;}
+.mail, .RS{color:black;}
 .RS{text-decoration: none;}
-
-/********************INDEX.HTML********************/
-/*Propiedades exclusivas del archivo index.html
-/*MAIN DEL INDEX*/
+#sec, .galeria{background-color: #d5c75f}
+/********************1.5.INDEX.HTML********************/
 #principal{background-color:#82c3a6; margin:0;}
-#sec{background-color: #d5c75f}
 .imgSec{border:2px solid black}
 #col1 img:hover{transform:rotate(10deg);filter:drop-shadow(2px 2px #82c3a6);border:2px solid #82c3a6; }
 #col2 img:hover{transform:translate(20px, -5px);filter:drop-shadow(2px 2px #82c3a6);border:2px solid #82c3a6;}
-.muestras{text-align: center; font-weight:bold}
-.muestras a{color:black;}
-
-/********************INDEX.HTML********************/
-/********************INDEX.HTML********************/
-
+#muestras{text-align: center; font-weight:bold}
+#muestras a{color:black;}
 /********************MEDIA********************/
-/*MEDIA ESCRITORIO*/
+/*2.1MEDIA ESCRITORIO*/
 @media(min-width:900px){
-  /*Propiedades generales para todas las paginas en computadora*/
-  /*body*/
-  #contenido{max-width: 900px;margin:auto;}
-  /*header*/
+  /*2.1.PROPIEDADES GENERALES*/
+  /*2.1.1.BODY*/
+  .contenido{max-width: 900px;margin:auto;}
+  /*2.1.2.HEADER*/
   header{display: flex;align-items: baseline;animation:reboteHeader 1s}
   h1{width:80%;padding-left: 2%}
   nav{padding:2%;width: 20%;display: flex; justify-content: space-between}
-  /*footer*/
+  /*2.1.3.FOOTER*/
   footer{padding:2% 0 0 1%;display: flex;} 
-  .colIndex{width: 25%;margin:2%}
-
-  /*Particularidades para cada pagina web en computadora*/
- /******MAIN INDEX.HTML******/
+  .colFooter{width: 25%;margin:2%} 
+  /******2.1.4.MAIN INDEX.HTML******/
   #imgPrincipal{width:90%;margin:3% 5%}
   #sec{width: 100%; display:flex;padding:5% 0;}
   #sec img{width: 86%; margin:0 7%;}
+  /******2.1.5.MAIN PAISAJES.HTML Y RETRATOS.HTML******/
+  .galeria{max-width: 900px;margin:0;}
+  .galeriaContenido{width: 100%; display: flex; flex-direction: row; flex-wrap: wrap}
+  .contenedorImagen{width:27%;margin:3% 0 3% 5% ;}
+  .contenedorImagen img{width: 100%}
 
- /******MAIN INDEX.HTML******/
- /******MAIN INDEX.HTML******/
 }
-/*MEDIA MOVIL*/
+/*3.MEDIA MOVIL*/
 @media(max-width:900px){
-    /*Propiedades generales para todas las paginas en moviles*/
-    /*header*/
+  /*2.2.PROPIEDADES GENERALES */
+  /*2.2.1.BODY*/
+  .contenido{width: 100%}
+  figure{margin:0;}
+  /*2.2.2.HEADER*/
   header{display: flex;flex-direction:column;}
   h1{text-align: center}
   nav{align-self: center;padding-bottom:5%; word-spacing: 3vw}
-    /*footer*/
+  /*2.2.3.MAIN************************************************/
+  /*2.2.4.FOOTER*/
   footer{padding:4% 0 2% 10%;}
-  .colIndex{width: 100%;padding-top:10%}
+  .colFooter{width: 100%;padding-top:10%}
 
-   /*Particularidades para cada pagina web en moviles*/
-   /******MAIN INDEX.HTML******/
-    #imgPrincipal, .imgSec{width: 80%;margin:3% 10%}
-  #sec{padding:4% 0;}
- /******MAIN INDEX.HTML******/
- /******MAIN INDEX.HTML******/ 
+  /*Particularidades para cada pagina web en moviles*/
+  /******2.2.5.MAIN INDEX.HTML******/
+  #mainIndex section{align-items: center}
+  #imgPrincipal{width: 80%;margin:8% 10%}
+  .imgSec{width: 80%}
 }
-
-/********************ANIMACIONES********************/
+#col1{margin:0}
+#sec{padding:8% 0;text-align: center}
+/******2.2.6.MAIN PAISAJES.HTML Y RETRATOS.HTML******/
+.galeriaContenido{width: 100%;}
+.galeriaContenido img{width: 80%;margin:8% 10%}
+}
+/********************3.ANIMACION********************/
 @keyframes reboteHeader{
   0%{margin-top:150%;}
   60%{margin-top:-5%;}
